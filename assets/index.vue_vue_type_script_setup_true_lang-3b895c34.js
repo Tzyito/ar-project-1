@@ -1,0 +1,1 @@
+import{u as e}from"./useCamera-5f971a70.js";import{d as o,g as t,o as a,c as s}from"./index-0c8f6718.js";const n={class:"h-300px",width:"500",height:"400",autoplay:"true","x5-video-player-type":""},m=o({__name:"index",setup(r){return t(async()=>await e()),(c,p)=>(a(),s("video",n))}});export{m as _};

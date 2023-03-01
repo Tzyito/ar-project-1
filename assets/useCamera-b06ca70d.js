@@ -1,0 +1,1 @@
+const i=o=>new Promise(async(a,t)=>{console.log("开始打开摄像头");const n=await navigator.mediaDevices.getUserMedia({video:{width:500,height:400,facingMode:"environment"}});if(n)if(!o)t(new Error("not find el"));else{let e=o;e.srcObject=n,console.log(e.srcObject),e.onloadedmetadata=function(s){e.play(),console.log("开始播放")}}else alert("摄像头开启失败")});export{i as u};

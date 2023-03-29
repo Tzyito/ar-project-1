@@ -89,7 +89,7 @@
 
 			// create atToolkitContext
 			arToolkitContext = new THREEx.ArToolkitContext({
-				cameraParametersUrl: 'data/camera_para.dat',
+				cameraParametersUrl: '/public/assets/data/camera_para.dat',
 				detectionMode: 'mono'
 			});
 
@@ -104,7 +104,7 @@
 
 			markerRootArray = [];
 			markerGroupArray = [];
-			patternArray = ["letterA", "letterB", "letterC", "letterD", "letterF", "kanji"];
+			patternArray = ["letterA", "letterB", "letterC", "letterD", "letterF", "letterG"];
 
 			let rotationArray = [new THREE.Vector3(-Math.PI / 2, 0, 0), new THREE.Vector3(0, -Math.PI / 2, Math.PI / 2), new THREE.Vector3(Math.PI / 2, 0, Math.PI),
 			new THREE.Vector3(-Math.PI / 2, Math.PI / 2, 0), new THREE.Vector3(Math.PI, 0, 0), new THREE.Vector3(0, 0, 0)];

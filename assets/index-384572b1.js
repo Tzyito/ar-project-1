@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vueexport-helper-c27b6911.js";import{o as r,c as t}from"./index-822441dd.js";const _={},c={class:"iframe",src:"arGPS.html",frameborder:"0"};function o(n,s){return r(),t("iframe",c)}const i=e(_,[["render",o]]);export{i as default};

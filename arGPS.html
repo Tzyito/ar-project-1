@@ -23,8 +23,18 @@
 
 </html>
 <script>
+    const getLocation = async () => {
+        return new Promise(res => {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const { latitude, longitude } = position.coords
+                res({ latitude, longitude })
+            })
+        })
+    }
     const el = document.querySelector('[gps-entity-place]')
     setInterval(() => {
+        const { latitude, longitude } = await getLocation()
+        console.log(`现在经纬度: ${latitude},${longitude}`);
         const distanceMsg = el.getAttribute('distanceMsg');
         console.log(distanceMsg, '距离多远');   // "890 meters"
     }, 1000)

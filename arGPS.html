@@ -11,14 +11,21 @@
 <body>
     <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
         renderer='antialias: true; alpha: true'>
-        <a-entity material='color: red' geometry='primitive: box'
-            gps-new-entity-place="latitude: 30.5925231; longitude: 104.0642245;" scale="10 10 10" postion="0 0 0">
-        </a-entity>
+        <a-box material='color: red' gps-entity-place="latitude: 30.5925231; longitude: 104.0642245;"
+            scale="100 100 100" postion="0 0 0">
+        </a-box>
 
-        <a-text value="This content will always face you" look-at="[gps-camera]"
+        <!-- <a-text value="This content will always face you" look-at="[gps-camera]"
             gps-entity-place="latitude: 30.5925231; longitude: 104.0642245;" postion="0 0 0"></a-text>
-        <a-camera gps-camera rotaion-reader></a-camera>
+        <a-camera gps-camera rotaion-reader></a-camera> -->
     </a-scene>
 </body>
 
 </html>
+<script>
+    const el = document.querySelector('[gps-entity-place]')
+    setInterval(() => {
+        const distanceMsg = el.getAttribute('distanceMsg');
+        console.log(distanceMsg, '距离多远');   // "890 meters"
+    }, 1000)
+</script>

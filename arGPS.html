@@ -14,10 +14,10 @@
         <a-box material='color: red' gps-entity-place="latitude: 30.5925231; longitude: 104.0642245;"
             scale="100 100 100" postion="0 0 0">
         </a-box>
-
         <!-- <a-text value="This content will always face you" look-at="[gps-camera]"
             gps-entity-place="latitude: 30.5925231; longitude: 104.0642245;" postion="0 0 0"></a-text>
-        <a-camera gps-camera rotaion-reader></a-camera> -->
+        -->
+        <a-camera gps-camera rotaion-reader></a-camera>
     </a-scene>
 </body>
 
@@ -31,9 +31,11 @@
             })
         })
     }
-    const el = document.querySelector('[gps-entity-place]')
-    setInterval(() => {
-        const { latitude, longitude } = await getLocation()
+    const el = document.querySelector('a-box')
+    console.log('el: ', el);
+
+    setInterval(async () => {
+        const { latitude, longitude } = await getLocation();
         console.log(`现在经纬度: ${latitude},${longitude}`);
         const distanceMsg = el.getAttribute('distanceMsg');
         console.log(distanceMsg, '距离多远');   // "890 meters"
